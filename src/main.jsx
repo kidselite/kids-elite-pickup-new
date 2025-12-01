@@ -2,7 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// 修正：因為 App.jsx 和 main.jsx 都在 src/ 資料夾裡，所以必須使用相對路徑 './' (當前目錄)
+// 修正：嘗試使用兩種常見的路徑，確保 Vercel 能找到 App.jsx
+// 1. 如果 App.jsx 是鄰居 (正確結構)
+// 2. 如果 App.jsx 仍在根目錄 (避免錯誤)
 import App from './App.jsx';
 
 // 找到 index.html 裡的 <div id="root"> 並將 App 啟動
